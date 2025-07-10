@@ -1,43 +1,60 @@
 /* Reset and base styles */
 * {
   box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+  line-height: 1.6;
+}
+
 .page-title {
   text-align: center;
-  margin: 20px 0;
+  font-size: 2.5rem;
+  margin: 40px 0 20px;
+  color: #444;
 }
 
 .section-container {
-  padding: 0 15px;
+  padding: 0 20px 40px;
   overflow: hidden;
 }
 
 /* Section styles */
 .food-section {
   position: relative;
-  border: 1px solid black;
-  background-color: #f2f2f2;
-  padding: 40px 15px 15px 15px;
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+  padding: 60px 20px 20px;
   margin: 10px;
   float: left;
-  min-height: 200px;
+  min-height: 220px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.food-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .section-title {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #ffd700;
-  border: 1px solid black;
-  padding: 5px 10px;
+  background-color: #ff6f61;
+  color: white;
+  border: 1px solid #e65c50;
+  padding: 8px 16px;
   font-weight: bold;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  font-size: 1rem;
 }
 
 /* Desktop view: 992px and up */
@@ -64,6 +81,10 @@ body {
 @media (max-width: 767px) {
   .food-section {
     width: 100%;
-    margin: 10px 0;
+    margin: 15px 0;
+  }
+
+  .page-title {
+    font-size: 2rem;
   }
 }
